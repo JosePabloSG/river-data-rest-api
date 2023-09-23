@@ -1,0 +1,65 @@
+[
+    {
+        "id": "c8797b69-56a5-438e-a89c-0411d4927753",
+        "date": "2023-09-16",
+        "time": "08:00:00",
+        "waterLevel": 1,
+        "location": "Ubicación 1"
+    },
+    {
+        "id": "d830d970-232c-46f0-b615-20931641f58c",
+        "date": "2023-09-16",
+        "time": "09:15:00",
+        "waterLevel": 2,
+        "location": "Ubicación 2"
+    },
+    {
+        "id": "31832a83-416f-49e8-933b-772c9832c76c",
+        "date": "2023-09-16",
+        "time": "10:30:00",
+        "waterLevel": 3,
+        "location": "Ubicación 3"
+    },
+    {
+        "id": "e9b95b32-106d-4819-918c-7619c3f7177b",
+        "date": "2023-09-16",
+        "time": "11:45:00",
+        "waterLevel": 1,
+        "location": "Ubicación 4"
+    },
+    {
+        "id": "86f84119-1f7b-4e98-a09a-3bf5141d49b5",
+        "date": "2023-09-16",
+        "time": "13:00:00",
+        "waterLevel": 2,
+        "location": "Ubicación 5"
+    },
+    {
+        "id": "5626a7a2-5480-4475-85b2-43046f0b528d",
+        "date": "2023-09-16",
+        "time": "14:15:00",
+        "waterLevel": 3,
+        "location": "Ubicación 6"
+    },
+    {
+        "id": "1088f2b7-2347-4400-82bf-8300729e7b5c",
+        "date": "2023-09-16",
+        "time": "15:30:00",
+        "waterLevel": 1,
+        "location": "Ubicación 7"
+    },
+    {
+        "id": "9959f660-1e9c-4794-b803-f4c525882772",
+        "date": "2023-09-16",
+        "time": "16:45:00",
+        "waterLevel": 2,
+        "location": "Ubicación 8"
+    },
+    {
+        "id": "728a706c-b9f3-4366-8e90-26067652640c",
+        "date": "2023-09-16",
+        "time": "18:00:00",
+        "waterLevel": 3,
+        "location": "Ubicación 9"
+    }
+]

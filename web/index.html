@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        fetch('http://localhost:3000/data')
+            .then(response => response.json())
+            .then(data => {
+                const html = data.map(item => {
+                    return `
+                        <div data.id="data.id">
+                            <h1>${item.date}</h1>
+                            <p>${item.time}</p>
+                            <p>${item.waterLevel}</p>
+                            <p>${item.location}</p>
+                        </div>
+                    `;
+                }).join('');
+
+                document.querySelector('main').innerHTML = html;
+            });
+    </script>
+</head>
+
+<body>
+    <main>
+
+    </main>
+</body>
+
+</html>

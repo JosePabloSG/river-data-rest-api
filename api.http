@@ -1,0 +1,26 @@
+### recuperar todos lo registros de la tabla
+GET  http://localhost:3000/data
+
+### recuperar un registrro por id
+GET  http://localhost:3000/data/650e4305436a4bdd3a59953b
+
+### recuperar los registros por nivel
+GET  http://localhost:3000/data?waterLevel=2
+
+### recuperar los registros por fecha
+## se puede con todos los valores
+GET  http://localhost:3000/data?date=2020-10-10
+
+### actuliaza un registro por id
+
+PATCH http://localhost:3000/data/650e42b9436a4bdd3a58e780
+Content-Type: application/json
+
+{
+    "waterLevel": 2,
+    "date": "2020-10-10"
+}
+
+### elimina un registro por id
+DELETE http://localhost:3000/data/650e42ab436a4bdd3a58caf6
+
