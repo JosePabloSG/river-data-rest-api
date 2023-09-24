@@ -2,7 +2,7 @@
 GET  http://localhost:3000/data
 
 ### recuperar un registrro por id
-GET  http://localhost:3000/data/650e4305436a4bdd3a59953b
+GET  http://localhost:3000/data/asg1
 
 ### recuperar los registros por nivel
 GET  http://localhost:3000/data?waterLevel=2
