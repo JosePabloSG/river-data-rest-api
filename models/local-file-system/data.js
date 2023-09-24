@@ -1,4 +1,4 @@
-import { readJSON } from '../../utils.js'
+import { readJSON } from '../../utils.js' // TODO: LOCAL FILE SYSTEM NO FOUND
 const data = readJSON('./data.json')
 
 export class DataModel {

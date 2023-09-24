@@ -1,6 +1,6 @@
 import { validatePartialData } from '../schemas/data.js'
 
-export class DataController {
+export class DataController { // TODO: POSIBLE ERROR
   constructor ({ dataModel }) {
     this.dataModel = dataModel
   }

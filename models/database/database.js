@@ -26,7 +26,7 @@ async function connect () {
 export class DataModel {
   static async getAll ({ date, time, waterLevel, location }) {
     const db = await connect()
-    if (date) {
+    if (date) { // FIXME: date is not working
       return db.find({
         date: {
           $elemMatch: {
@@ -36,7 +36,7 @@ export class DataModel {
         }
       }).toArray()
     }
-    if (time) {
+    if (time) { // FIXME: time is not working
       return db.find({
         time: {
           $elemMatch: {
@@ -46,7 +46,7 @@ export class DataModel {
         }
       }).toArray()
     }
-    if (waterLevel) {
+    if (waterLevel) { // FIXME: waterLevel is not working
       return db.find({
         waterLevel: {
           $elemMatch: {
@@ -56,7 +56,7 @@ export class DataModel {
         }
       }).toArray()
     }
-    if (location) {
+    if (location) { // FIXME: location is not working
       return db.find({
         location: {
           $elemMatch: {
