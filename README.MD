@@ -1,1 +1,0 @@
-    "start:local": "node --watch server-with-local.js",
