@@ -26,47 +26,31 @@ async function connect () {
 export class DataModel {
   static async getAll ({ date, time, waterLevel, location }) {
     const db = await connect()
-    if (date) { // FIXME: date is not working
+    if (date) {
       return db.find({
-        date: {
-          $elemMatch: {
-            $regex: date,
-            $options: 'i'
-          }
-        }
+        date: { $eq: date }
       }).toArray()
     }
-    if (time) { // FIXME: time is not working
+    if (time) {
       return db.find({
         time: {
-          $elemMatch: {
-            $regex: time,
-            $options: 'i'
-          }
+          $regex: new RegExp(time, 'i')
         }
       }).toArray()
     }
-    if (waterLevel) { // FIXME: waterLevel is not working
+    if (waterLevel) {
       return db.find({
-        waterLevel: {
-          $elemMatch: {
-            $regex: waterLevel,
-            $options: 'i'
-          }
-        }
+        waterLevel: { $eq: parseInt(waterLevel) }
       }).toArray()
     }
-    if (location) { // FIXME: location is not working
+    if (location) {
       return db.find({
         location: {
-          $elemMatch: {
-            $regex: location,
-            $options: 'i'
-          }
+          $regex: new RegExp(location, 'i')
         }
       }).toArray()
     }
-    return db.find({}).toArray()
+    // return db.find({}).toArray()
   }
 
   static async getById ({ id }) {
