@@ -1,5 +1,5 @@
-import { readJSON } from '../../utils.js' // TODO: LOCAL FILE SYSTEM NO FOUND
-const data = readJSON('./data.json')
+import { readJSON } from '../../utils.js'
+const data = readJSON('./mocks/data.json', 'utf-8')
 
 export class DataModel {
   static filterData (data, filter) {
@@ -13,17 +13,41 @@ export class DataModel {
     })
   }
 
-  static getAll () {
-    const filter = {
-      waterLevel: undefined,
-      date: undefined,
-      time: undefined,
-      location: undefined
-    }
+  static async getAll ({ date, time, waterLevel, location }) {
+    const filter = {}
 
+    if (date !== undefined) {
+      filter.date = date
+    }
+    if (time !== undefined) {
+      filter.time = time
+    }
+    if (waterLevel !== undefined) {
+      filter.waterLevel = parseInt(waterLevel)
+    }
+    if (location !== undefined) {
+      filter.location = location
+    }
     const filteredData = DataModel.filterData(data, filter)
 
-    return filteredData
+    // Filtrar los datos por fecha, waterLevel y location
+    const dateFilteredData = filteredData.filter((item) => {
+      if (date !== undefined && item.date !== date) {
+        return false
+      }
+      if (time !== undefined && item.time !== time) {
+        return false
+      }
+      if (waterLevel !== undefined && item.waterLevel !== parseInt(waterLevel)) {
+        return false
+      }
+      if (location !== undefined && item.location !== location) {
+        return false
+      }
+      return true
+    })
+
+    return dateFilteredData
   }
 
   static returnFilteredData (req, res) {
@@ -49,8 +73,8 @@ export class DataModel {
     res.json(filteredData)
   }
 
-  static async getById (id) {
-    const foundData = data.find((item) => item.id === id)
+  static async getById ({ id }) {
+    const foundData = data.find(item => item.id === id)
     return foundData
   }
 
