@@ -1,5 +1,5 @@
-import { readJSON } from '../../utils.js'
-const data = readJSON('./mocks/data.json', 'utf-8')
+import { readJSON } from '../../utils/utils.js'
+const data = readJSON('../mocks/data.json', 'utf-8')
 
 export class DataModel {
   static filterData (data, filter) {
