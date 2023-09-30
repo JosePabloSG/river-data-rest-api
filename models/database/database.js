@@ -50,7 +50,7 @@ export class DataModel {
         }
       }).toArray()
     }
-    // return db.find({}).toArray()
+    return db.find({}).toArray()
   }
 
   static async getById ({ id }) {
