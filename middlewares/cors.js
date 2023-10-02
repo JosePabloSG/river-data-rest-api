@@ -7,7 +7,7 @@ const ACCEPTED_ORIGINS = [
   'http://127.0.0.1:5500',
   'https://joseabh.github.io/AppAlertaRio',
   'https://joseabh.github.io/AppAlertaRio/historial.html',
-  'https://joseabh.github.io/'
+  'https://joseabh.github.io'
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
