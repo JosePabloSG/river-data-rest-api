@@ -4,11 +4,8 @@ const ACCEPTED_ORIGINS = [
   // Localhost
   'http://localhost:8080',
   'http://localhost:3000',
-  'http://localhost:5500',
-  'http://127.0.0.1:5500',
   // Despliegues
   'https://joseabh.github.io',
-  'https://back-pzj5-dev.fl0.io',
   'https://api-rest-river-date-dev-bmke.4.us-1.fl0.io'
 ]
 
