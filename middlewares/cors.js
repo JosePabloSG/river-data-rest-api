@@ -8,7 +8,8 @@ const ACCEPTED_ORIGINS = [
   'http://127.0.0.1:5500',
   // Despliegues
   'https://joseabh.github.io',
-  'https://back-pzj5-dev.fl0.io'
+  'https://back-pzj5-dev.fl0.io',
+  'https://api-rest-river-date-dev-bmke.4.us-1.fl0.io'
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
