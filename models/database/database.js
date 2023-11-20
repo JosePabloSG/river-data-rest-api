@@ -15,7 +15,7 @@ async function connect () {
   try {
     await client.connect()
     const database = client.db('DB-River-date')
-    return database.collections('Data')
+    return database.collection('Data')
   } catch (error) {
     console.error('Error connecting to the database')
     console.error(error)
