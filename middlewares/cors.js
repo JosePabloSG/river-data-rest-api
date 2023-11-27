@@ -18,7 +18,7 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => c
     if (!origin) {
       return callback(null, true)
     }
-//
+//test
     return callback(new Error('Not allowed by CORS'))
   }
 })
