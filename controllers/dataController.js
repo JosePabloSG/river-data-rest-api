@@ -42,7 +42,7 @@ export class DataController {
 
     return res.json({ message: 'Water level data deleted' })
   }
-
+//test
   update = async (req, res) => {
     const result = validatePartialData(req.body)
 
